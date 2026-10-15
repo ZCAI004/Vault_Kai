@@ -73,3 +73,27 @@ That's it — the example vault is ready to explore!
 
 - **Keep your copy up to date with the original:** on your fork's GitHub page, click **Sync fork → Update branch**, then pull the changes (`git pull` on the command line, or **Fetch origin → Pull origin** in GitHub Desktop).
 - **Workspace noise:** Obsidian constantly updates `.obsidian/workspace.json`. Adding it to `.gitignore` keeps your commits clean.
+
+
+----
+## Further explaination of adding the .gitignore
+
+1. Add the ignore rule
+
+Open your repository on github.com.
+If a .gitignore file already exists, click it, then click the pencil icon (Edit).
+If not, click Add file → Create new file and name it .gitignore.
+Add these lines:
+  .obsidian/workspace.json
+  .obsidian/workspace-mobile.json
+Click Commit changes.
+
+2. Stop tracking the file (only if it's already in the repo)
+
+Go into the .obsidian folder and click workspace.json.
+Click the ⋯ menu (top right of the file view) and choose Delete file.
+Click Commit changes.
+
+3. Sync your computer
+
+Pull the changes into your local vault, using your Git plugin or git pull. This will also delete your local workspace.json, which is harmless: Obsidian recreates it straight away. After that, Git will ignore it for good.
