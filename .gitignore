@@ -1,0 +1,6 @@
+# macOS Finder metadata (all directories)
+.DS_Store
+
+# Per-device Obsidian workspace state; keep other vault settings tracked
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json

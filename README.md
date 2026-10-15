@@ -1,99 +1,47 @@
-This is an example folder structure and template set for MA MFA Goldsmiths Computational Arts studio practice students.
-This folder structure is intended to be used with Obsidian, and is therefore written in markdown.
+# Vault_Kai
 
- Follow the steps below to get your own copy, download it to your computer, and open it in Obsidian.
+用于学习、研究笔记和艺术创作的个人 Obsidian 知识库。
 
+## 目录
 
-
-## Before you start
-
-You'll need:
-
-- A free [GitHub account](https://github.com/signup)
-- [Obsidian](https://obsidian.md/download) installed
-- Either **Git** (for the command line) or **[GitHub Desktop](https://desktop.github.com/)**
-
-
-## 1. Fork the repository
-
-Forking creates your own copy of the vault on GitHub, so you can save changes without affecting the original.
-
-1. Sign in to GitHub and open this repository's page.
-2. Click **Fork** (top right).
-3. Leave the defaults as they are and click **Create fork**.
-
-You now have a copy at `https://github.com/YOUR-USERNAME/StudioPracticeExampleVault`.
-
-
-## 2. Download (clone) your fork
-
-Pick **one** of the two options below.
-
-### Option A: Command line
-
-1. Open a terminal (Terminal on macOS/Linux, PowerShell or Git Bash on Windows).
-2. Move to the folder where you want the vault to live, for example:
-   ```bash
-   cd ~/Documents
-   ```
-3. Clone your fork (replace the placeholders with your details):
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
-   ```
-4. A new folder called `REPO-NAME` now contains the vault.
-
-To save and upload your changes later:
-```bash
-cd REPO-NAME
-git add .
-git commit -m "Describe your changes"
-git push
+```text
+Vault_Kai/
+├── .obsidian/   # Obsidian 配置
+├── Notes/       # 日常笔记、随手记录、使用指南
+├── Projects/    # 创作项目、反馈记录
+├── Research/    # 阅读清单、读书笔记、研究资料
+├── Assets/      # 图片与其他附件
+├── README.md
+├── .gitignore
+└── .gitattributes  # 保留原有 Git 换行规范
 ```
 
-### Option B: GitHub Desktop
+- `Notes/DailyNotes/`：每日记录。
+- `Notes/Dumping ground.md`：暂未归类的想法。
+- `Projects/FeedbackNotes/`：反馈记录及原有模板。
+- `Research/ReadingList/`：阅读清单。
+- `Research/Reading Reflections/`：读书笔记，包括 *The Order of Time*。
+- `Assets/`：保留原图片分类 `ArtistExamples`、`MySketches`、`RandomImages`。
 
-1. Open GitHub Desktop and sign in with your GitHub account (**File → Options → Accounts** on Windows, **GitHub Desktop → Settings → Accounts** on macOS).
-2. Go to **File → Clone repository**.
-3. On the **GitHub.com** tab, select `YOUR-USERNAME/REPO-NAME` from the list.
-4. Choose a **Local path** (e.g. your Documents folder) and click **Clone**.
+## 在 Obsidian 中使用
 
-To save and upload your changes later: write a summary in the bottom-left box, click **Commit to main**, then click **Push origin**.
+打开文件夹作为仓库（Open folder as vault），选择最外层 `Vault_Kai`。
+默认新笔记保存到 `Notes/`，每日笔记保存到 `Notes/DailyNotes/`，新附件保存到 `Assets/`。
+现有图片嵌入使用唯一文件名（如 `![[StickFigure.png]]`），整理后仍可解析。
 
+## Git 同步
 
-## 3. Open the vault in Obsidian
+个人仓库：<https://github.com/ZCAI004/Vault_Kai>。
+`origin` 指向个人仓库，`upstream` 保留为原始模板的参考来源。
+整理保留本地和远程的原有提交历史；现有笔记、图片和阅读清单的勾选状态均保留。
 
-1. Open Obsidian.
-2. On the start screen, choose **Open folder as vault** (if a vault is already open, click the vault switcher in the bottom-left and choose **Manage vaults**).
-3. Select the `REPO-NAME` folder you just cloned and click **Open**.
-4. If the vault includes community plugins, Obsidian will ask whether you trust the author. Choose **Trust author and enable plugins** only if you're happy to run them. NB this version does not include community plugins.
+`.DS_Store` 和设备专用的 `.obsidian/workspace*.json` 不再纳入版本控制，电脑上的文件仍可保留。
+其他 Obsidian 配置继续同步。日常使用 GitHub Desktop 提交笔记，然后 Push origin。
 
-That's it — the example vault is ready to explore!
+## 原始资料
 
-## Tips
+- [Obsidian 使用指南](Notes/Help%20using%20Obsidian.md)
+- [原仓库说明全文（历史参考）](Notes/Reference/Original%20repository%20setup.md)
+- 模板来源：<https://github.com/ktwindmill/StudioPracticeExampleVault>，用于 Goldsmiths Computational Arts studio practice。
 
-- **Keep your copy up to date with the original:** on your fork's GitHub page, click **Sync fork → Update branch**, then pull the changes (`git pull` on the command line, or **Fetch origin → Pull origin** in GitHub Desktop).
-- **Workspace noise:** Obsidian constantly updates `.obsidian/workspace.json`. Adding it to `.gitignore` keeps your commits clean.
-
-
-----
-## Further explaination of adding the .gitignore
-
-1. Add the ignore rule
-
-Open your repository on github.com.
-If a .gitignore file already exists, click it, then click the pencil icon (Edit).
-If not, click Add file → Create new file and name it .gitignore.
-Add these lines:
-  .obsidian/workspace.json
-  .obsidian/workspace-mobile.json
-Click Commit changes.
-
-2. Stop tracking the file (only if it's already in the repo)
-
-Go into the .obsidian folder and click workspace.json.
-Click the ⋯ menu (top right of the file view) and choose Delete file.
-Click Commit changes.
-
-3. Sync your computer
-
-Pull the changes into your local vault, using your Git plugin or git pull. This will also delete your local workspace.json, which is harmless: Obsidian recreates it straight away. After that, Git will ignore it for good.
+原仓库说明全文保留在上面的历史参考中，其中的旧目录及同步步骤以本页为准。
